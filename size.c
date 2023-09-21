@@ -7,21 +7,21 @@
  *
  * Return: Precision.
  */
-int get_size(const char *format, int *i)
+int get_sizee(const char *format, int *j)
 {
-	int curr_i = *i + 1;
-	int size = 0;
+	int cur_j = *j + 1;
+	int sizee = 0;
 
-	if (format[curr_i] == 'l')
-		size = S_LONG;
-	else if (format[curr_i] == 'h')
-		size = S_SHORT;
+	if (format[cur_j] == 'l')
+		sizee = S_LONG;
+	else if (format[cur_j] == 'h')
+		sizee = S_SHORT;
 
-	if (size == 0)
-		*i = curr_i - 1;
+	if (sizee == 0)
+		*j = cur_j - 1;
 	else
-		*i = curr_i;
+		*j = cur_j;
 
-	return (size);
+	return (sizee);
 }
 
